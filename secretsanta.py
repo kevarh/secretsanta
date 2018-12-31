@@ -7,7 +7,7 @@ from time import time
 
 t0 = time()
 
-allsolutions = True
+allsolutions = False
 
 
 """
@@ -83,7 +83,7 @@ def generateGraph(rules):
     return nodes
 
 def showSolution(graph, solution):
-    dot = Digraph(comment='Secret Santa')
+    dot = Digraph(comment='Secret Santa',format='png')
     dot.engine = 'circo'
     foo = {}
     for key, value in graph.items():
@@ -91,7 +91,7 @@ def showSolution(graph, solution):
         dot.node(str(value.n), str(key))
     for key, value in solution.items():
         dot.edge(str(key), str(value))
-    dot.render('test-output/secret-santa.gv', view=True)
+    dot.render('secret-santa.gv', view=True)
 
 def reverseSolution(solution, graph):
     names = {}

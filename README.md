@@ -19,3 +19,12 @@ There are two things you probably want to change.
 ## Running
 
 When running the script, it will find a solution and display it with Graphviz
+
+## Example Output
+
+```
+python secretsanta.py
+{'Me': 'Cousin', 'Cousin': 'Father', 'Wife': 'Uncle', 'Couple': 'Wife', 'Uncle2': 'Grandmother', 'Father': 'Couple', 'Grandfather': 'Mother', 'Grandmother': 'Aunt', 'Aunt': 'Grandfather', 'Mother': 'Uncle2', 'Uncle': 'Me'}
+```
+
+![Example Output](secret-santa.gv.png)
